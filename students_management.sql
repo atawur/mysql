@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2019 at 07:28 PM
+-- Generation Time: Mar 17, 2019 at 12:26 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.26
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `students_management`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_information`
+--
+
+CREATE TABLE `student_information` (
+  `id` int(11) NOT NULL,
+  `student_name` varchar(50) NOT NULL,
+  `description` text NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -44,6 +57,12 @@ CREATE TABLE `tasklist` (
 --
 
 --
+-- Indexes for table `student_information`
+--
+ALTER TABLE `student_information`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tasklist`
 --
 ALTER TABLE `tasklist`
@@ -52,6 +71,12 @@ ALTER TABLE `tasklist`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `student_information`
+--
+ALTER TABLE `student_information`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tasklist`
