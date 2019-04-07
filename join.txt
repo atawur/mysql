@@ -1,0 +1,8 @@
+SELECT 
+student_information.id,
+student_information.student_name,
+students_course.course_id,
+course.name
+FROM student_information 
+JOIN students_course on student_information.id=students_course.student_id
+JOIN course on students_course.course_id=course.id
