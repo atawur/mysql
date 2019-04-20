@@ -1,0 +1,4 @@
+SELECT students_course.*,student_information.student_name
+FROM 
+students_course
+RIGHT OUTER JOIN student_information on students_course.student_id=student_information.id
